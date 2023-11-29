@@ -156,6 +156,11 @@ body {
 .navigation{
   grid-area: nav;
   background: var(--md-sys-color-surface-container);
+  display: flex;
+  flex-direction: row;
+  @media(min-width: $breakpoint-tablet){
+    flex-direction: column;
+  }
   &__button{
     display: flex;
     flex-direction: column;
