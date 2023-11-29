@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 $breakpoint-tablet: 600px;
-$breakpoint-laptop: 840px;
+$breakpoint-laptop: 800px;
 
 :root {
     /* light */
@@ -156,12 +156,18 @@ body {
 .navigation{
   grid-area: nav;
   background: var(--md-sys-color-surface-container);
-  &__bottom{
+  &__button{
+    display: flex;
+    flex-direction: column;
+
     &__icon{
       &__icon {
         color: var(--md-sys-color-on-surface-variant);
     }
 
+    }
+    @media(min-width: $breakpoint-laptop){
+      flex-direction: row;
     }
   }
 }
